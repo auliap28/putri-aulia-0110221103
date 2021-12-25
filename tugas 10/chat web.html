@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Web</title>
+    <style>
+        body {
+            background-color: lightslategray;
+        }
+        h1 {
+            margin: 50px 50px 4px;
+        }
+        .result-chat {
+            margin: 50px 50px 10px;
+            height: 450px;
+            width: 400px;
+            background-color: lightsalmon;
+            color: black;
+            border: 1px solid black;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .input-chat {
+            height: 40px;
+            margin-left: 50px;
+        }
+        .btnchat{
+            background-color: rgb(43, 122, 172);
+            border: none;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>ChiChat</h1>
+        <br>
+        <br>
+        <br>
+        <div class="result-chat"></div>
+        <div>
+            <input type="text" placeholder="kirim pesan" class="input-chat" size="45">
+            <button class="btnchat">kirim</button>
+        </div>
+    </main>
+    <script>
+        let resultchat = document.querySelector(".result-chat");
+        const inputchat = document.querySelector(".input-chat");
+        const btnchat = document.querySelector(".btnchat"); 
+
+        btnchat.addEventListener("click", function(){
+            resultchat.innerHTML = resultchat.innerHTML + "<br>" + "you :" + inputchat.value;
+            inputchat.value = "";
+        })
+    </script>
+</body>
+</html>

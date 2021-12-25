@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 2</title>
+</head>
+<body>
+    <h3 style="color: red">konversi mata uang asing</h3>
+    <fieldset style="display: flex;">
+        <table style="border: 1px solid black">
+            <tr>
+                <td>
+                    <label for="">masukan nilai</label>
+                    <br>
+                    <input type="number" size="20" value="" id="jumlahuang">
+                </td>
+            </tr>
+        </table>
+        <table style="border: 1px solid black;">
+            <tr>
+                <td>
+                    <label for="">mata uang</label>
+                    <br>
+                    <select name="bank" onclick=konfersi()>
+                        <br>
+                        <option value="us_dollar" id="us_dollar">Us Dollar</option>
+                        <option value="yen" id="yen">jepang</option>
+                        <option value="ringgit" id="ringgit">Malaysia</option>
+                        <option value="us_singapure" id="us_singapure">Singapure</option>
+                        <option value="riyal" id="riyal">Arab</option>
+                        <option value="euro" id="euro">Rusia</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table style="border: 1px solid black;">
+            <tr>
+                <td>
+                    <label for="">Nilai Rupiah</label>
+                    <br>
+                    <span type="number" id="hasilhitung"></span>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <script type="text/javascript">
+        function konversi(){
+            const dollaramerika = 9915;
+            const yenjepang = 120;
+            const dollarsingapure = 13472;
+            const ringgitmalaysia = 874;
+            const eurorusia = 15888;
+            const riyalarab = 3529;
+
+            let jumlahuang = document.getElementById("jumlahuang").value;
+            let bank = document.getElementById("bank");
+            let hasilhitung = document.getElementById("hasilhitung");
+
+            if(bank.value === "us_dollar"){
+                console.log = (jumlahuang.value * 9915)
+                hasilhitung.innerHTML = 'Rp.' = jumlahuang.valuem * 9915;
+            }
+            else if(bank.value === "yen"){
+                console.log = (jumlahuang.value * 120)
+                hasilhitung.innerHTML = 'Rp.' = jumlahuang.valuem * 120;
+            }
+            else if(bank.value === "ringgit"){
+                console.log = (jumlahuang.value * 874)
+                hasilhitung.innerHTML = 'Rp.' = jumlahuang.valuem * 874;
+            }
+            else if(bank.value === "us_singapure"){
+                console.log = (jumlahuang.value * 13472)
+                hasilhitung.innerHTML = 'Rp.' = jumlahuang.valuem * 13472;
+            }
+            else if(bank.value === "riyal"){
+                console.log = (jumlahuang.value * 3592)
+                hasilhitung.innerHTML = 'Rp.' = jumlahuang.valuem * 3592;
+            }if(bank.value === "euro"){
+                console.log = (jumlahuang.value * 15888)
+                hasilhitung.innerHTML = 'Rp.' = jumlahuang.valuem * 15888;
+            }
+        }
+    </script>
+</body>
+</html>

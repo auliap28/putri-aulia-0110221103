@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Slahkan Pilih Gambar</h2>
+        <br>
+        <table style="border: 1px solid black;">
+            <tr>
+                <td>
+                    <label for="hewan">pilih salah satu</label>
+                    <br>
+                    <select id="hewan" onclick="cetakgambar()">
+                        <option value="">buka</option>
+                        <option value="Kucing">Kucing</option>
+                        <option value="anjing">Anjing</option>
+                        <option value="rubah">Rubah</option>
+                        <option value="serigala">Serigala</option>
+                        <option value="burunghantu">Burung Hantu</option>
+                        <option value="Ular">Ular</option>
+                        <option value="Musang">Musang Putih</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <button onclick="cetakgambar()">
+    </button>
+    <br>
+        <div style="width: 50px; height: 50px; border-style: solid ipx;">
+            <img src="" id="gambar">
+        </div>
+    <script>
+        function cetakgambar(){
+            const hewan = document.getElementById("hewan");
+            const gambar = document.getElementById("gambar");
+
+            if (hewan.value === "Kucing"){
+                gambar.src = "https://i.pinimg.com/originals/bd/44/e8/bd44e8f137bd8d7591bb9fed0a3d1798.jpg"
+            }
+            if (hewan.value === "anjing"){
+                gambar.src = "https://disk.mediaindonesia.com/thumbs/1800x1200/news/2020/10/ce81066b2cfef8a6705834563e00b574.jpeg"
+            }
+            if (hewan.value === "rubah"){
+                gambar.src = "https://static.republika.co.id/uploads/images/inpicture_slide/rubah-sulit-dibasmi-di-wilayah-urban-_170628072005-531.jpg"
+            }
+            if (hewan.value === "serigala"){
+                gambar.src = "https://2.bp.blogspot.com/_EHJRtAZrmX8/TGylUr_RWII/AAAAAAAAAis/4pAmdTr5PtM/w1200-h630-p-nu/Ely-International%252BWolf%252BCenter.jpg"
+            }
+            if (hewan.value === "burunghantu"){
+                gambar.src = "https://infobinatang.com/wp-content/uploads/2020/01/jenis-burung-hantu-tawny-owl-3-1024x749.jpg"
+            }
+            if (hewan.value === "Ular"){
+                gambar.src = "https://i.pinimg.com/originals/36/06/57/3606577c55ca9641fcaa5f3b56be0542.jpg"
+            }
+            if (hewan.value === "Musang"){
+                gambar.src = "https://cerpin.com/wp-content/uploads/2017/06/foto-foto-musang-putih-ermine-yang-lucu-dan-imut-cerpin-com-14-768x575.jpg"
+            }
+        }
+    </script>
+</body>
+</html>

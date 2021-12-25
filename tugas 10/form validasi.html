@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    span {
+        visibility:hidden;
+    }
+</style>
+<body>
+    <input type="text" id="namapelanggan" placeholder="Nama">
+    <span class="warning" style="color: red;">nama tidak boleh kosong</span>
+    <br>
+    <input type="email" id="email" placeholder="Email">
+    <span class="warning"  style="color: red;">email tidak boleh kosong</span>
+    <br>
+    <input type="time" id="jamkeberangkatan">
+    <span class="warning"  style="color: red;">waktu tidak boleh kosong</span>
+    <br>
+    <input type="tujuan" id="tujuankeberangkatan">
+    <span class="warning" style="color: red;">tujuan tidak boleh kosong</span>
+    <br>
+    <input type="number" id="jumlahtiket">
+    <span class="warning" style="color: red;">tiket tidak boleh kosong</span>
+    <br>
+    <input type="submit" value="tekan dulu biar di proses" id="tombol submit" onclick="validasi()">
+
+    <script>
+        let nama = document.getElementById("namapelanggan")
+        let email = document.getElementById("email")
+        let time = document.getElementById("jamkeberangkatan")
+        let tujuan = document.getElementById("tujuankeberangkatan")
+        let tiket = document.getElementById("jumlahtiket")
+        let span = document.getElementsByClassName("warning")
+
+        function validasi(){
+            if (nama.value == "" && email.value == "" && time.value == "" && tujuan.value == "" && tiket.value == "") {
+                span[0].style.visibility = "visible"
+                span[1].style.visibility = "visible"
+                span[2].style.visibility = "visible"
+                span[3].style.visibility = "visible"
+                span[4].style.visibility = "visible"
+            } else if (email.value == "" && time.value == "" && tujuan.value == "" && tiket.value == "") {
+                span[1].style.visibility = "visible"
+                span[2].style.visibility = "visible"
+                span[3].style.visibility = "visible"
+                span[4].style.visibility = "visible"
+            } else if (time.value == "" && tujuan.value == "" && tiket.value == "") {
+                span[2].style.visibility = "visible"
+                span[3].style.visibility = "visible"
+                span[4].style.visibility = "visible"
+            } else if (tujuan.value == "" && tiket.value == "") {
+                span[3].style.visibility = "visible"
+                span[4].style.visibility = "visible"
+            } else if (tiket.value == "") {
+                span[4].style.visibility = "visible"
+            }
+        }
+    </script>
+</body>
+</html>
